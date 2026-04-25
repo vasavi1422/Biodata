@@ -1,0 +1,361 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Engineering Biodata | Modern Card Style</title>
+  <!-- Bootstrap 5 + Icons + Google Fonts (Poppins & Montserrat) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f1f4fa;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 2rem 1.2rem;
+      color: #1e293b;
+    }
+
+    /* main container with glassmorphism touch */
+    .biodata-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* custom card style */
+    .profile-card {
+      background: #ffffff;
+      border-radius: 36px;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    /* left panel - soft gradient background */
+    .left-panel {
+      background: linear-gradient(145deg, #101f2e 0%, #1e3a4d 100%);
+      color: #f0f9ff;
+      padding: 2rem 1.8rem;
+      height: 100%;
+      border-radius: 0;
+    }
+
+    .right-panel {
+      background: white;
+      padding: 2rem 2rem 2rem 1.8rem;
+    }
+
+    .avatar-large {
+      width: 140px;
+      height: 140px;
+      background: rgba(255,255,240,0.15);
+      backdrop-filter: blur(2px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.3rem auto;
+      border: 3px solid #ffcd94;
+      box-shadow: 0 12px 20px -8px rgba(0,0,0,0.3);
+    }
+    .avatar-large i {
+      font-size: 4.6rem;
+      color: #ffddb0;
+    }
+
+    .name-title {
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .badge-specialty {
+      background: rgba(255,205,148,0.2);
+      border-radius: 60px;
+      padding: 0.3rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      display: inline-block;
+      backdrop-filter: blur(4px);
+    }
+    .info-line {
+      border-bottom: 1px dashed rgba(255,255,245,0.2);
+      padding: 0.7rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .info-line i {
+      width: 28px;
+      font-size: 1.2rem;
+      color: #ffcd94;
+    }
+    .section-title-modern {
+      font-weight: 800;
+      font-size: 1.45rem;
+      letter-spacing: -0.3px;
+      margin-bottom: 1.2rem;
+      border-bottom: 3px solid #ffcd94;
+      display: inline-block;
+      padding-bottom: 0.2rem;
+      color: #0f2b36;
+    }
+    .skill-chip {
+      background: #eef3fc;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      color: #1b4b5e;
+      transition: 0.2s;
+      border: 1px solid #dce5ef;
+    }
+    .skill-chip:hover {
+      background: #1f6e7a;
+      color: white;
+      transform: translateY(-2px);
+    }
+    .project-block {
+      background: #f9fbfe;
+      border-radius: 20px;
+      padding: 0.8rem 1rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #ffae5a;
+      transition: 0.1s;
+    }
+    .stat-badge {
+      background: #eef2ff;
+      border-radius: 30px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #285e6b;
+    }
+    .btn-outline-custom {
+      border: 1.5px solid #ffcd94;
+      background: transparent;
+      border-radius: 40px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #ffddb0;
+      transition: 0.2s;
+    }
+    .btn-outline-custom:hover {
+      background: #ffcd94;
+      color: #1e3a4d;
+      border-color: #ffcd94;
+    }
+    hr.divider-light {
+      opacity: 0.3;
+      margin: 1rem 0;
+    }
+    @media (max-width: 768px) {
+      .left-panel {
+        text-align: center;
+      }
+      .info-line {
+        justify-content: center;
+      }
+      .right-panel {
+        padding: 1.8rem;
+      }
+    }
+    .interest-tag {
+      background: white;
+      border-radius: 30px;
+      padding: 0.2rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #1e3a4d;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+<div class="biodata-wrapper">
+  <div class="profile-card">
+    <div class="row g-0">
+      <!-- LEFT SIDE: Personal & contact (dark style) -->
+      <div class="col-md-5 col-lg-4">
+        <div class="left-panel">
+          <div class="avatar-large">
+            <img src="photo.jpg" alt="profile " style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+          </div>
+          <div class="text-center mb-3">
+            <h2 class="name-title display-6 fw-bold">Badukonda Vasavi</h2>
+            <div class="badge-specialty mt-2 mb-2">B.Tech CSSE</div>
+            <p class="small opacity-75">2nd Year B.Tech, Lendi Institute of Engineering and Technology</p>
+          </div>
+
+          <div class="mt-3">
+            <div class="info-line">
+              <i class="bi bi-envelope-fill"></i>
+              <span>24kd1a1506@lendi.edu.in</span>
+            </div>
+            <div class="info-line">
+              <i class="bi bi-phone-fill"></i>
+              <span>+91 8008488650</span>
+            </div>
+            <div class="info-line">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Vizianagaram</span>
+            </div>
+            <div class="info-line">
+              <i class="bi bi-calendar3"></i>
+              <span>Born: 28-05-2006</span>
+            </div>
+            <div class="info-line">
+              <i class="bi bi-translate"></i>
+              <span>Telugu, English</span>
+            </div>
+          </div>
+
+          <hr class="divider-light my-4">
+
+          <div>
+            <h6 class="fw-bold mb-3"><i class="bi bi-heart-fill me-1" style="color: #ffcd94;"></i> Interests & Hobbies</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="interest-tag">cooking</span>
+              
+              <span class="interest-tag"> Learning New Things</span>
+              <span class="interest-tag"> User Interface Design Creation</span>
+              <span class="interest-tag"> Creative Works</span>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <h6 class="fw-bold mb-2"><i class="bi bi-link-45deg"></i> Digital Presence</h6>
+            <div class="d-flex gap-3 mt-2">
+              <a href="https://linkedin.com/in/badukonda-vasavi-8277ba34a"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="window.open('https://linkedin.com/in/badukonda-vasavi-8277ba34a','_blank'); return false;"
+              class="text-white text-decoration-none opacity-75">
+              <i class="bi bi-linkedin fs-5"></i>
+              </a>
+              <a href="https://github.com/vasavi1422"target="_blank" class="text-white text-decoration-none opacity-75 hover-opacity-100"><i class="bi bi-github fs-5"></i></a>
+               </div>
+            <div class="mt-3">
+              <a href="#" class="btn btn-outline-custom w-100 text-center">📄 Download Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: Academic & project details (light style) -->
+      <div class="col-md-7 col-lg-8">
+        <div class="right-panel">
+          <!-- short intro -->
+          <div cl<a href="https://www.linkedin.com/in/badukonda-vasavi-8277ba34a" target="_blank" class="text-white text-decoration-none opacity-75"><i class="bi bi-linkedin fs-5"></i></a>
+           ass="mb-4">
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <i class="bi bi-quote fs-1" style="color: #ffae5a;"></i>
+              <p class="fst-italic text-secondary mb-0">"Driven to build intelligent systems that solve real-world inefficiencies."</p>
+            </div>
+            <p class="small text-muted mt-2">Aspiring software engineer with strong foundation in full-stack development, machine learning, and cloud basics. Enthusiastic learner with participation in hackathons and strong interest in AI and web development.</p>
+          </div>
+
+          <!-- Education timeline -->
+          <div class="mb-4">
+            <div class="section-title-modern"> Education Path</div>
+            <div class="d-flex flex-wrap justify-content-between align-items-start mb-2">
+              <div>
+                <h5 class="fw-bold mb-0">B.Tech CSSE</h5>
+                <p class="text-muted small">Lendi Institute Of Engineering And Technology | 2nd Year B.Tech</p>
+              </div>
+            </div>
+            <div class="mt-2">
+              <div class="fw-semibold">Intermediate </div>
+              <p class="text-muted small">Srinivasa junior College</p>
+            </div>
+          </div>
+
+          <!-- Tech Skills Grid -->
+          <div class="mb-4">
+            <div class="section-title-modern"> Tech Arsenal</div>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="skill-chip">HTML</span>
+              <span class="skill-chip">CSS</span>
+              <span class="skill-chip">C</span>
+              <span class="skill-chip">Java</span>
+              <span class="skill-chip">Python</span>
+            </div>
+          </div>
+
+          <!-- Projects (modern cards) -->
+          <div class="mb-4">
+            <div class="section-title-modern"> Featured Projects</div>
+            <div class="project-block">
+              <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <h6 class="fw-bold mb-1">Smart Event Discovery app</h6>
+                <p style="font-size: 0.85rem;">
+smart event discovery app is a web based application used for students to discover events held on different colleges and districts 
+it provides us a admin authentication system for admin.
+</p>
+              </div>
+              
+            </div>
+            <div class="project-block">
+              <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <h6 class="fw-bold mb-1">AI Crop Advisory System</h6>
+                <span class="badge bg-warning bg-opacity-25 text-dark">AI/Agriculture</span>
+              </div>
+              <p class="small text-muted">A smart agricultural tool using AI to analyze soil conditions, weather data, and crop health to provide optimized farming advice and yield predictions for better agricultural outcomes.</p>
+            </div>
+          </div>
+
+          <!-- Internship + Achievements row -->
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="section-title-modern" style="font-size: 1.25rem;"> Internships</div>
+              <div class="mb-2">
+                <p class="fw-bold mb-0">AWS Generative AI Virtual Internship</p>
+                <p class="text-muted small">Virtual</p>
+                <p class="small">Hands-on experience with AWS generative AI services.</p>
+              </div>
+              <div class="mb-2">
+                <p class="fw-bold mb-0">Palo Alto Cybersecurity Virtual Internship</p>
+                <p class="text-muted small">Virtual</p>
+                <p class="small">Focused on cybersecurity fundamentals and tools.</p>
+              </div>
+              <div class="mb-2">
+                <p class="fw-bold mb-0">Web Fullstack Developer Virtual Internship</p>
+                <p class="text-muted small">Virtual</p>
+                <p class="small">Developed full-stack web applications.</p>
+              </div>
+              <div>
+                <p class="fw-bold mb-0">AWS Cloud Virtual Internship</p>
+                <p class="text-muted small">Virtual</p>
+                <p class="small">Gained experience in AWS cloud services.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="section-title-modern" style="font-size: 1.25rem;">Highlights</div>
+              <ul class="list-unstyled small">
+                
+                <li class="mb-2"><i class="bi bi-award-fill text-primary me-2"></i>SIH Smart India Hackathon</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Certifications bar -->
+          <div class="mt-4 pt-1">
+            <div class="d-flex flex-wrap align-items-center gap-3">
+              <span class="fw-semibold"><i class="bi bi-patch-check-fill text-success"></i> Certifications:</span>
+              <span class="badge bg-light text-dark border">Java Short Term Training Program (Hands on Experience)</span>
+            </div>
+          </div>
+          <hr class="mt-4">
+          <div class="text-end text-muted small">
+            <i class="bi bi-download"></i> Last updated: April 2026 | Open to SDE intern roles
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (optional for some interactions) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
